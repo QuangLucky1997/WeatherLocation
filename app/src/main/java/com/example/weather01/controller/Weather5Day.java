@@ -68,7 +68,7 @@ public class Weather5Day extends AppCompatActivity {
         result = intent.getStringExtra("city");
         Retrofit retrofit = apiService.getApi();
         apiCall apiCall = retrofit.create(com.example.weather01.Api.apiCall.class);
-        Call<ForecastWeatherResponse> fiveDayResponeCall = apiCall.getWeather5day(result, "5f29e35711ac92b01c4115be53dc09b5");
+        Call<ForecastWeatherResponse> fiveDayResponeCall = apiCall.getWeather5day(result, "your token key openweatherMap");
         fiveDayResponeCall.enqueue(new Callback<ForecastWeatherResponse>() {
             @Override
             public void onResponse(Call<ForecastWeatherResponse> call, Response<ForecastWeatherResponse> response) {
